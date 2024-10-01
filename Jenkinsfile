@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/kokareamol/Multi-Tier-Java-Main.git'
+                git branch: 'main', url: 'https://github.com/kokareamol/multitier-java.git'
             }
         }
         stage('mvn compile') {
