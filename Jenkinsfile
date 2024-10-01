@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/kokareamol/multitier-java.git'
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-token', url: 'https://github.com/kokareamol/Multi-Tier-Java-Main.git']])
             }
         }
         stage('mvn compile') {
